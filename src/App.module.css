@@ -1,0 +1,48 @@
+.app {
+  min-height: 100vh;
+  background-color: #f7fafc;
+  padding: 20px;
+}
+
+.header {
+  max-width: 1200px;
+  margin: 0 auto 32px;
+}
+
+.header h1 {
+  text-align: center;
+  color: #2d3748;
+  margin-bottom: 24px;
+  font-size: 2.5rem;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.controlGroup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: 16px;
+  }
+  
+  .controlGroup {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
