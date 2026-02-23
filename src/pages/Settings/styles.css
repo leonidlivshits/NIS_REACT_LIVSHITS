@@ -1,0 +1,4 @@
+.settings-page { max-width:720px; margin:12px auto; }
+.setting-row { display:flex; justify-content:space-between; align-items:center; padding:12px 0; border-bottom:1px dashed #eee; }
+.setting-row label { font-weight:600; }
+.setting-row button { margin-left:8px; }

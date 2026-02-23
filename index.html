@@ -8,6 +8,12 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+
+    <script>
+      window.__APP_API_BASE_URL = 'http://localhost:3001'; // todo
+      console.log('[bootstrap] runtime base:', window.__APP_API_BASE_URL);
+    </script>
+
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

@@ -1,0 +1,4 @@
+.app-sidebar { width:220px; padding:12px; background:transparent; }
+.app-sidebar ul { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px; }
+.app-sidebar a { padding:8px 10px; border-radius:8px; color:var(--text); display:block; }
+.app-sidebar a:hover { background: rgba(15,23,42,0.04); color:var(--primary); text-decoration:none; }
