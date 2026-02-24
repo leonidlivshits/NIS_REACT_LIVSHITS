@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  push:
+    branches: [main, hw_3_devs, hw_3]
+  pull_request:
+    branches: [main, hw_3_devs, hw_3]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run stylelint
+      - run: npm run format -- --check
+      - run: npm run test -- --run
+      - run: npm run build

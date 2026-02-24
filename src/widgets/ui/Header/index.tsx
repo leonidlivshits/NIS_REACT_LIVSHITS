@@ -1,28 +1,43 @@
 import React from 'react';
-import './styles.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { useAppSelector } from '../../../app/hooks';
-import type { RootState } from '../../../app/store';
+import { useAppSelector, useAppDispatch } from '../../../app/hooks';
+import { logout } from '../../../features/auth/authSlice';
+import LogoutIcon from '@mui/icons-material/Logout';
+import './styles.css';
 
 export const Header: React.FC = () => {
   const { t } = useTranslation();
-  const user = useAppSelector((s: RootState) => s.auth.user);
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
+  const user = useAppSelector((state) => state.auth.user);
+
+  const handleLogout = () => {
+    dispatch(logout());
+    navigate('/login', { replace: true });
+  };
+
+  const userInitial = user?.firstName?.[0] ?? user?.name?.[0] ?? 'A';
+  const userName = user ? `${user.firstName ?? user.name ?? ''}` : t('admin');
+  const userEmail = user?.email ?? '';
 
   return (
     <header className="app-header">
-      <div className="app-header__left">
-        <Link to="/profile" className="logo" aria-label="Profile link">
-          <div className="badge">{(user?.firstName?.[0] ?? 'A').toUpperCase()}</div>
-          <div>
-            <div style={{fontSize:14, lineHeight:1}}>{t('dashboard')}</div>
-            <div className="subtle" style={{fontSize:12}}>{user ? `${user.firstName ?? user.name ?? ''}` : t('admin')}</div>
+      <div className="header-left">
+        <Link to="/profile" className="logo">
+          <div className="logo-badge">{userInitial.toUpperCase()}</div>
+          <div className="logo-text">
+            <div className="logo-title">{t('dashboard')}</div>
+            <div className="logo-subtitle">{userName}</div>
           </div>
         </Link>
       </div>
 
-      <div className="app-header__right">
-        <span className="subtle">{user?.email ?? ''}</span>
+      <div className="header-right">
+        {userEmail && <span className="user-email">{userEmail}</span>}
+        <button onClick={handleLogout} className="logout-button" title={t('logout')}>
+          <LogoutIcon fontSize="small" />
+        </button>
       </div>
     </header>
   );

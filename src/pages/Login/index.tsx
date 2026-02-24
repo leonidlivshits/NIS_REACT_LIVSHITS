@@ -8,15 +8,16 @@ import { useTranslation } from 'react-i18next';
 import type { FetchBaseQueryError } from '@reduxjs/toolkit/dist/query';
 
 function isFetchBaseQueryError(error: unknown): error is FetchBaseQueryError {
-  return typeof error === 'object' && error !== null && ('status' in error);
+  return typeof error === 'object' && error !== null && 'status' in error;
 }
 
 function getRuntimeBaseForLog() {
-  const gw = (globalThis as unknown) as { __APP_API_BASE_URL?: string | undefined };
+  const gw = globalThis as unknown as { __APP_API_BASE_URL?: string | undefined };
   if (gw.__APP_API_BASE_URL) return gw.__APP_API_BASE_URL;
-  const im = (import.meta as unknown) as { env?: { VITE_API_BASE_URL?: string } | undefined };
+  const im = import.meta as unknown as { env?: { VITE_API_BASE_URL?: string } | undefined };
   if (im?.env?.VITE_API_BASE_URL) return im.env.VITE_API_BASE_URL;
-  if (typeof process !== 'undefined' && process.env?.REACT_APP_API_BASE_URL) return process.env.REACT_APP_API_BASE_URL;
+  if (typeof process !== 'undefined' && process.env?.REACT_APP_API_BASE_URL)
+    return process.env.REACT_APP_API_BASE_URL;
   return 'https://dummyjson.com';
 }
 
@@ -33,9 +34,9 @@ const LoginPage: React.FC = () => {
     e.preventDefault();
     setError(null);
 
-    const base = (getRuntimeBaseForLog() || '');
+    const base = getRuntimeBaseForLog() || '';
     const payload = { username, password };
-    const curlCmd = `curl -i -X POST "${base.replace(/\/$/, '')}/auth/login" -H "Content-Type: application/json" -d "{\"username\":\"${username}\",\"password\":\"${password}\"}"`;
+    const curlCmd = `curl -i -X POST "${base.replace(/\/$/, '')}/auth/login" -H "Content-Type: application/json" -d "{"username":"${username}","password":"${password}"}"`;
 
     console.log('--- Login diagnostics ---');
     console.log('Computed base URL:', base);
@@ -77,13 +78,21 @@ const LoginPage: React.FC = () => {
         </label>
         <label>
           {t('password')}
-          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
         </label>
-        <button type="submit" disabled={isLoading}>{t('submit')}</button>
+        <button type="submit" disabled={isLoading}>
+          {t('submit')}
+        </button>
         {error && <div className="error">{error}</div>}
       </form>
       <div style={{ marginTop: 12, fontSize: 13, color: '#666' }}>
-        Tip: default test creds - <strong>kminchelle / 0lelplR</strong> (DummyJSON example). If you use local mock, check src/mock/dummy.json.
+        Tip: default test creds - <strong>kminchelle / 0lelplR</strong> (DummyJSON example). If you
+        use local mock, check src/mock/dummy.json.
       </div>
     </div>
   );
