@@ -20,7 +20,9 @@ const safeSetItem = (key: string, value: string) => {
     if (typeof globalThis.localStorage === 'object' && typeof globalThis.localStorage?.setItem === 'function') {
       globalThis.localStorage.setItem(key, value);
     }
-  } catch {
+  } 
+  catch {
+    return;
   }
 };
 
