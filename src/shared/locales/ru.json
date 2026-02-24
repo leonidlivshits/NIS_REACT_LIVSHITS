@@ -25,5 +25,6 @@
   "light": "Светлая",
   "dark": "Тёмная",
   "name": "Имя",
-  "email_label": "Эл. почта"
+  "email_label": "Эл. почта",
+  "invalid_credentials": "Неверные учётные данные"
 }

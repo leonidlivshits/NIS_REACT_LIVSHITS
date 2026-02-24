@@ -25,5 +25,6 @@
   "light": "Light",
   "dark": "Dark",
   "name": "Name",
-  "email_label": "Email"
+  "email_label": "Email",
+  "invalid_credentials": "Invalid credentials"
 }

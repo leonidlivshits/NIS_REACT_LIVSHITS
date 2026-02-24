@@ -1,3 +1,4 @@
+// src/pages/Login/index.tsx  (обновлённая версия с fallback)
 import React, { useState } from 'react';
 import { useLoginMutation } from '../../app/api/apiSlice';
 import { useAppDispatch } from '../../app/hooks';
@@ -5,21 +6,23 @@ import { setCredentials } from '../../features/auth/authSlice';
 import { useNavigate } from 'react-router-dom';
 import './styles.css';
 import { useTranslation } from 'react-i18next';
-import type { FetchBaseQueryError } from '@reduxjs/toolkit/dist/query';
+import type { FetchBaseQueryError } from '@reduxjs/toolkit/query';
 
 function isFetchBaseQueryError(error: unknown): error is FetchBaseQueryError {
-  return typeof error === 'object' && error !== null && 'status' in error;
+  return typeof error === 'object' && error !== null && 'status' in (error as any);
+}
+function hasMessage(obj: unknown): obj is { message: string } {
+  return typeof obj === 'object' && obj !== null && 'message' in (obj as any) && typeof (obj as any).message === 'string';
 }
 
-function getRuntimeBaseForLog() {
-  const gw = globalThis as unknown as { __APP_API_BASE_URL?: string | undefined };
-  if (gw.__APP_API_BASE_URL) return gw.__APP_API_BASE_URL;
-  const im = import.meta as unknown as { env?: { VITE_API_BASE_URL?: string } | undefined };
-  if (im?.env?.VITE_API_BASE_URL) return im.env.VITE_API_BASE_URL;
-  if (typeof process !== 'undefined' && process.env?.REACT_APP_API_BASE_URL)
-    return process.env.REACT_APP_API_BASE_URL;
-  return 'https://dummyjson.com';
-}
+const safeSetItem = (key: string, value: string) => {
+  try {
+    if (typeof globalThis.localStorage === 'object' && typeof globalThis.localStorage?.setItem === 'function') {
+      globalThis.localStorage.setItem(key, value);
+    }
+  } catch {
+  }
+};
 
 const LoginPage: React.FC = () => {
   const { t } = useTranslation();
@@ -33,27 +36,26 @@ const LoginPage: React.FC = () => {
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
-
-    const base = getRuntimeBaseForLog() || '';
-    const payload = { username, password };
-    const curlCmd = `curl -i -X POST "${base.replace(/\/$/, '')}/auth/login" -H "Content-Type: application/json" -d "{"username":"${username}","password":"${password}"}"`;
-
-    console.log('--- Login diagnostics ---');
-    console.log('Computed base URL:', base);
-    console.log('Request payload:', payload);
-    console.log('Curl command (Windows cmd):\n', curlCmd);
-
     try {
-      const res = await login({ username, password }).unwrap();
-      dispatch(setCredentials({ token: res.token, user: res.user ?? null }));
-      localStorage.setItem('token', res.token);
-      if (res.user) localStorage.setItem('user', JSON.stringify(res.user));
-      navigate('/', { replace: true });
+      const res = await login({ username: username.trim(), password }).unwrap();
+      if (res?.token) {
+        dispatch(setCredentials({ token: res.token, user: res.user ?? null }));
+        safeSetItem('token', res.token);
+        if (res.user) safeSetItem('user', JSON.stringify(res.user));
+        navigate('/', { replace: true });
+      } else {
+        setError(t('login_error'));
+      }
     } catch (err: unknown) {
       if (isFetchBaseQueryError(err)) {
         const data = err.data;
-        if (data && typeof data === 'object' && 'message' in data) {
-          setError((data as any).message);
+        if (hasMessage(data)) {
+          const translated = t('invalid_credentials');
+          if (typeof translated === 'string' && translated !== 'invalid_credentials') {
+            setError(translated);
+          } else {
+            setError(data.message);
+          }
         } else if (typeof data === 'string') {
           setError(data);
         } else {
@@ -71,29 +73,18 @@ const LoginPage: React.FC = () => {
   return (
     <div className="login-page">
       <h2>{t('login')}</h2>
-      <form onSubmit={onSubmit} className="login-form">
+      <form onSubmit={onSubmit} className="login-form" aria-label="login-form">
         <label>
           {t('username')}
           <input value={username} onChange={(e) => setUsername(e.target.value)} required />
         </label>
         <label>
           {t('password')}
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
+          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
         </label>
-        <button type="submit" disabled={isLoading}>
-          {t('submit')}
-        </button>
-        {error && <div className="error">{error}</div>}
+        <button type="submit" disabled={isLoading}>{t('submit')}</button>
+        {error && <div role="alert" className="error">{error}</div>}
       </form>
-      <div style={{ marginTop: 12, fontSize: 13, color: '#666' }}>
-        Tip: default test creds - <strong>kminchelle / 0lelplR</strong> (DummyJSON example). If you
-        use local mock, check src/mock/dummy.json.
-      </div>
     </div>
   );
 };
