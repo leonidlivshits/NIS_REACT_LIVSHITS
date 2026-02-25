@@ -1,0 +1,30 @@
+.layout-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.layout-body {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.layout-main {
+  flex: 1;
+  padding: 20px;
+  background: var(--panel);
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+}
+
+@media (width <= 768px) {
+  .layout-body {
+    flex-direction: column;
+  }
+}

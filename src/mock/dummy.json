@@ -1,0 +1,10 @@
+{
+  "users": [
+    { "id": 1, "username": "kminchelle", "password": "0lelplR", "firstName": "Jeanne", "lastName": "Doe", "email": "jeanne@example.com" }
+  ],
+  "products": [
+    { "id": 1, "title": "iPhone 9", "description": "An apple mobile", "price": 549, "rating": 4.69, "stock": 94, "brand": "Apple", "category": "smartphones", "thumbnail": "", "images": [] },
+    { "id": 2, "title": "Samsung Universe 9", "description": "Another phone", "price": 1249, "rating": 4.09, "stock": 36, "brand": "Samsung", "category": "smartphones", "thumbnail": "", "images": [] },
+    { "id": 3, "title": "MacBook Pro", "description": "Laptop by Apple", "price": 1749, "rating": 4.57, "stock": 20, "brand": "Apple", "category": "laptops", "thumbnail": "", "images": [] }
+  ]
+}
