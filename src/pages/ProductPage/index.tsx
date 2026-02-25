@@ -4,6 +4,8 @@ import { useGetProductByIdQuery } from '../../app/api/apiSlice';
 import ProtectedLayout from '../../widgets/layouts/ProtectedLayout';
 import './styles.css';
 import type { Product } from '../../entities/product/product';
+import ArrowLeftIcon from '../../shared/icons/ArrowLeft';
+import StarIcon from '../../shared/icons/Star';
 
 const ProductPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -40,8 +42,8 @@ const ProductPage: React.FC = () => {
   return (
     <ProtectedLayout>
       <div className="product-page">
-        <button onClick={() => navigate(-1)} className="back-btn">
-          ← Back to products
+        <button onClick={() => navigate(-1)} className="back-btn" aria-label="go back">
+          <ArrowLeftIcon /> <span>Back</span>
         </button>
 
         <div className="product-card">
@@ -49,16 +51,27 @@ const ProductPage: React.FC = () => {
 
           <div className="product-meta">
             <span className="product-price">${product.price}</span>
-            {product.rating && <span className="product-rating">{product.rating.toFixed(1)}</span>}
-            {product.category && <span className="product-category">{product.category}</span>}
+
+            {typeof product.rating === 'number' && (
+              <span
+                className="product-rating"
+                aria-label={`rating ${product.rating.toFixed(1)}`}
+                style={{ display: 'inline-flex', alignItems: 'center', gap: 6, marginLeft: 12 }}
+              >
+                <StarIcon aria-hidden />
+                <span className="rating-value">{product.rating.toFixed(1)}</span>
+              </span>
+            )}
+
+            {product.category && <span className="product-category" style={{ marginLeft: 12 }}>{product.category}</span>}
           </div>
 
           <p className="product-description">{product.description}</p>
 
           {product.images && product.images.length > 0 && (
-            <div className="product-images">
+            <div className="product-images" aria-label="product images">
               {product.images.slice(0, 4).map((img, idx) => (
-                <img key={idx} src={img} alt={product.title} />
+                <img key={idx} src={img} alt={`${product.title} image ${idx + 1}`} loading="lazy" />
               ))}
             </div>
           )}
