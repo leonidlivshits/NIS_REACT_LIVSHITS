@@ -1,0 +1,55 @@
+[
+  {
+    "id": "wish-1",
+    "title": "ACCEPT ALL COOKIES - Vinyl",
+    "artistId": "loqiemean",
+    "type": "vinyl",
+    "targetPrice": 4000,
+    "image": "https://images.unsplash.com/photo-1619983081563-430f63602796?w=600&h=600&fit=crop",
+    "releaseDate": "2025-03-15T00:00:00.000Z",
+    "notifyOnRelease": true,
+    "notifyOnPriceDrop": true
+  },
+  {
+    "id": "wish-2",
+    "title": "The Slow Rush - Deluxe Edition",
+    "artistId": "tame-impala",
+    "type": "vinyl",
+    "targetPrice": 6000,
+    "image": "https://images.unsplash.com/photo-1619983081563-430f63602796?w=600&h=600&fit=crop",
+    "releaseDate": "2025-02-14T00:00:00.000Z",
+    "notifyOnRelease": true,
+    "notifyOnPriceDrop": true
+  },
+  {
+    "id": "wish-3",
+    "title": "Whatever People Say - 20th Anniversary",
+    "artistId": "arctic-monkeys",
+    "type": "vinyl",
+    "targetPrice": 8000,
+    "image": "https://images.unsplash.com/photo-1598387993441-a364f854c3e1?w=600&h=600&fit=crop",
+    "notifyOnRelease": true,
+    "notifyOnPriceDrop": true
+  },
+  {
+    "id": "wish-4",
+    "title": "Loqiemean - World Tour 2025 Cap",
+    "artistId": "loqiemean",
+    "type": "accessory",
+    "targetPrice": 2500,
+    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=600&h=600&fit=crop",
+    "releaseDate": "2025-04-01T00:00:00.000Z",
+    "notifyOnRelease": true,
+    "notifyOnPriceDrop": false
+  },
+  {
+    "id": "wish-5",
+    "title": "У себя на кухне - Signed CD",
+    "artistId": "loqiemean",
+    "type": "cd",
+    "targetPrice": 3000,
+    "image": "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?w=600&h=600&fit=crop",
+    "notifyOnRelease": true,
+    "notifyOnPriceDrop": true
+  }
+]

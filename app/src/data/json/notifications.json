@@ -1,0 +1,49 @@
+[
+  {
+    "id": "notif-1",
+    "userId": "user-leonid",
+    "type": "price_drop",
+    "title": "Цена снизилась!",
+    "message": "IGOR - Limited Yellow Vinyl теперь стоит ₽4500 (было ₽6500)",
+    "read": false,
+    "createdAt": "2024-12-10T10:30:00.000Z",
+    "data": { "itemId": "coll-6", "oldPrice": 6500, "newPrice": 4500 }
+  },
+  {
+    "id": "notif-2",
+    "userId": "user-leonid",
+    "type": "new_release",
+    "title": "Новый релиз!",
+    "message": "Loqiemean анонсировал альбом \"ACCEPT ALL COOKIES\" на 2025 год",
+    "read": false,
+    "createdAt": "2024-12-09T15:45:00.000Z",
+    "data": { "artistId": "loqiemean", "album": "ACCEPT ALL COOKIES" }
+  },
+  {
+    "id": "notif-3",
+    "userId": "user-leonid",
+    "type": "limited_edition",
+    "title": "Ограниченный тираж!",
+    "message": "Arctic Monkeys выпустили limited edition винил в 500 копиях",
+    "read": true,
+    "createdAt": "2024-12-08T09:00:00.000Z"
+  },
+  {
+    "id": "notif-4",
+    "userId": "user-leonid",
+    "type": "sale",
+    "title": "Распродажа на Bandcamp!",
+    "message": "Скидка 20% на весь мерч Tame Impala",
+    "read": false,
+    "createdAt": "2024-12-07T12:00:00.000Z"
+  },
+  {
+    "id": "notif-5",
+    "userId": "user-leonid",
+    "type": "message",
+    "title": "Новое предложение обмена",
+    "message": "Васюков Александр предлагает обменять винил Tame Impala",
+    "read": false,
+    "createdAt": "2024-12-06T14:20:00.000Z"
+  }
+]

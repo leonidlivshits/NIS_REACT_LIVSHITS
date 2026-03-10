@@ -1,0 +1,132 @@
+[
+  {
+    "id": "comment-1",
+    "discussionId": "disc-1",
+    "authorId": "user-anna",
+    "content": "Я планирую идти! Буду в черной футболке с логотипом Loqiemean. Давайте создадим чат в телеграме для координации?",
+    "likes": 5,
+    "likedBy": ["user-dmitry"],
+    "replyTo": null,
+    "createdAt": "2024-12-10T11:30:00.000Z"
+  },
+  {
+    "id": "comment-2",
+    "discussionId": "disc-1",
+    "authorId": "user-leonid",
+    "content": "Тоже иду! Уже взял билеты на балкон. Кто-нибудь знает, можно ли будет купить мерч на концерте?",
+    "likes": 8,
+    "likedBy": ["user-dmitry", "user-anna"],
+    "replyTo": null,
+    "createdAt": "2024-12-10T12:15:00.000Z"
+  },
+  {
+    "id": "comment-3",
+    "discussionId": "disc-1",
+    "authorId": "user-dmitry",
+    "content": "@Лившиц Леонид да, мерч будет! На прошлом концерте продавали футболки, кепки и постеры. Цены адекватные.",
+    "likes": 12,
+    "likedBy": ["user-leonid", "user-anna"],
+    "replyTo": "user-leonid",
+    "createdAt": "2024-12-10T13:00:00.000Z"
+  },
+  {
+    "id": "comment-4",
+    "discussionId": "disc-1",
+    "authorId": "user-kirill",
+    "content": "К сожалению, не смогу прийти - буду в командировке. Но если кто-то запишет концерт, буду благодарен!",
+    "likes": 3,
+    "likedBy": [],
+    "replyTo": null,
+    "createdAt": "2024-12-10T14:20:00.000Z"
+  },
+  {
+    "id": "comment-5",
+    "discussionId": "disc-2",
+    "authorId": "user-vasyukov",
+    "content": "Попробуй поискать на Discogs, там часто появляются оригинальные издания. Но будь осторожен с продавцами - проверяй рейтинг.",
+    "likes": 12,
+    "likedBy": ["user-anna", "user-leonid"],
+    "replyTo": null,
+    "createdAt": "2024-12-09T15:20:00.000Z"
+  },
+  {
+    "id": "comment-6",
+    "discussionId": "disc-2",
+    "authorId": "user-leonid",
+    "content": "@Анна Шварева у меня есть дубль этого винила, могу обменять на что-то из Loqiemean или Arctic Monkeys. Напиши в личку!",
+    "likes": 7,
+    "likedBy": ["user-anna"],
+    "replyTo": "user-anna",
+    "createdAt": "2024-12-09T16:45:00.000Z"
+  },
+  {
+    "id": "comment-7",
+    "discussionId": "disc-3",
+    "authorId": "user-anna",
+    "content": "Согласна! Currents - шедевр. Жду новый альбом с нетерпением. Kevin Parker не подводит.",
+    "likes": 15,
+    "likedBy": ["user-kirill", "user-leonid", "user-vasyukov"],
+    "replyTo": null,
+    "createdAt": "2024-12-08T10:30:00.000Z"
+  },
+  {
+    "id": "comment-8",
+    "discussionId": "disc-3",
+    "authorId": "user-dmitry",
+    "content": "Мне больше нравится Lonerism, но Currents тоже крутой. Жду концерта в Москве!",
+    "likes": 9,
+    "likedBy": ["user-kirill"],
+    "replyTo": null,
+    "createdAt": "2024-12-08T12:00:00.000Z"
+  },
+  {
+    "id": "comment-9",
+    "discussionId": "disc-4",
+    "authorId": "user-leonid",
+    "content": "У себя на кухне - однозначно шедевр! Но Пов3стка тоже очень сильная работа.",
+    "likes": 18,
+    "likedBy": ["user-vasyukov", "user-dmitry", "user-anna", "user-kirill"],
+    "replyTo": null,
+    "createdAt": "2024-12-07T17:00:00.000Z"
+  },
+  {
+    "id": "comment-10",
+    "discussionId": "disc-4",
+    "authorId": "user-vasyukov",
+    "content": "@Лившиц Леонид полностью согласен! У себя на кухне - это что-то особенное.",
+    "likes": 6,
+    "likedBy": ["user-leonid"],
+    "replyTo": "user-leonid",
+    "createdAt": "2024-12-07T18:30:00.000Z"
+  },
+  {
+    "id": "comment-11",
+    "discussionId": "disc-5",
+    "authorId": "user-anna",
+    "content": "Цена хорошая! Если еще актуально, напиши мне.",
+    "likes": 2,
+    "likedBy": ["user-dmitry"],
+    "replyTo": null,
+    "createdAt": "2024-12-06T12:00:00.000Z"
+  },
+  {
+    "id": "comment-12",
+    "discussionId": "disc-6",
+    "authorId": "user-kirill",
+    "content": "The Wall - это не просто альбом, это опыт. Каждый должен послушать хотя бы раз в жизни.",
+    "likes": 25,
+    "likedBy": ["user-leonid", "user-vasyukov", "user-anna", "user-dmitry", "user-ryan"],
+    "replyTo": null,
+    "createdAt": "2024-12-05T09:00:00.000Z"
+  },
+  {
+    "id": "comment-13",
+    "discussionId": "disc-6",
+    "authorId": "user-ryan",
+    "content": "Absolutely agree. The Wall changed my perspective on music forever. A true masterpiece.",
+    "likes": 14,
+    "likedBy": ["user-kirill", "user-leonid"],
+    "replyTo": null,
+    "createdAt": "2024-12-05T10:30:00.000Z"
+  }
+]

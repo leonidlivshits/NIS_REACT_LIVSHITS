@@ -1,0 +1,52 @@
+[
+  {
+    "id": "user-review-1",
+    "toUserId": "user-vasyukov",
+    "fromUserId": "user-leonid",
+    "rating": 5,
+    "content": "Отличный продавец! Винил пришел идеально упакованный, быстрая отправка. Рекомендую!",
+    "likes": 8,
+    "likedBy": ["user-dmitry", "user-anna"],
+    "createdAt": "2024-12-01T10:00:00.000Z"
+  },
+  {
+    "id": "user-review-2",
+    "toUserId": "user-vasyukov",
+    "fromUserId": "user-anna",
+    "rating": 5,
+    "content": "Второй раз покупаю у Александра. Все отлично, как всегда!",
+    "likes": 5,
+    "likedBy": ["user-leonid"],
+    "createdAt": "2024-11-25T14:30:00.000Z"
+  },
+  {
+    "id": "user-review-3",
+    "toUserId": "user-kirill",
+    "fromUserId": "user-leonid",
+    "rating": 4,
+    "content": "Хороший обмен, все честно. Немного задержалась отправка, но в целом доволен.",
+    "likes": 3,
+    "likedBy": [],
+    "createdAt": "2024-11-20T09:15:00.000Z"
+  },
+  {
+    "id": "user-review-4",
+    "toUserId": "user-dmitry",
+    "fromUserId": "user-anna",
+    "rating": 5,
+    "content": "Приятно иметь дело! Обмен прошел гладко, рекомендую.",
+    "likes": 4,
+    "likedBy": ["user-kirill"],
+    "createdAt": "2024-11-15T16:00:00.000Z"
+  },
+  {
+    "id": "user-review-5",
+    "toUserId": "user-anna",
+    "fromUserId": "user-dmitry",
+    "rating": 5,
+    "content": "Анна - отличный коллекционер! Было приятно пообщаться и обменяться.",
+    "likes": 6,
+    "likedBy": ["user-leonid", "user-vasyukov"],
+    "createdAt": "2024-11-10T11:30:00.000Z"
+  }
+]

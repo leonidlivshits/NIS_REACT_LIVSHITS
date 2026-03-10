@@ -1,0 +1,176 @@
+[
+  {
+    "id": "loqiemean",
+    "name": "Loqiemean",
+    "image": "https://images.unsplash.com/photo-1493225255756-d9584f8606e9?w=400&h=400&fit=crop",
+    "genre": "Hip Hop / Alternative",
+    "discography": [
+      { "title": "ПОВЕС2КА", "year": 2018, "type": "album" },
+      { "title": "Сожги Этот Альбом", "year": 2019, "type": "album" },
+      { "title": "Черная метка", "year": 2020, "type": "album" },
+      { "title": "Контроль", "year": 2021, "type": "album" },
+      { "title": "Пов3стка", "year": 2022, "type": "album" },
+      { "title": "У себя на кухне", "year": 2024, "type": "album" },
+      { "title": "ACCEPT ALL COOKIES", "year": 2025, "type": "album" }
+    ]
+  },
+  {
+    "id": "arctic-monkeys",
+    "name": "Arctic Monkeys",
+    "image": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&h=400&fit=crop",
+    "genre": "Alternative Rock",
+    "discography": [
+      { "title": "Whatever People Say I Am", "year": 2006, "type": "album" },
+      { "title": "Favourite Worst Nightmare", "year": 2007, "type": "album" },
+      { "title": "Humbug", "year": 2009, "type": "album" },
+      { "title": "Suck It and See", "year": 2011, "type": "album" },
+      { "title": "AM", "year": 2013, "type": "album" },
+      { "title": "Tranquility Base Hotel & Casino", "year": 2018, "type": "album" },
+      { "title": "The Car", "year": 2022, "type": "album" }
+    ]
+  },
+  {
+    "id": "tame-impala",
+    "name": "Tame Impala",
+    "image": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=400&h=400&fit=crop",
+    "genre": "Psychedelic Pop",
+    "discography": [
+      { "title": "Innerspeaker", "year": 2010, "type": "album" },
+      { "title": "Lonerism", "year": 2012, "type": "album" },
+      { "title": "Currents", "year": 2015, "type": "album" },
+      { "title": "The Slow Rush", "year": 2020, "type": "album" }
+    ]
+  },
+  {
+    "id": "the-strokes",
+    "name": "The Strokes",
+    "image": "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=400&h=400&fit=crop",
+    "genre": "Garage Rock",
+    "discography": [
+      { "title": "Is This It", "year": 2001, "type": "album" },
+      { "title": "Room on Fire", "year": 2003, "type": "album" },
+      { "title": "First Impressions of Earth", "year": 2006, "type": "album" },
+      { "title": "Angles", "year": 2011, "type": "album" },
+      { "title": "Comedown Machine", "year": 2013, "type": "album" },
+      { "title": "The New Abnormal", "year": 2020, "type": "album" }
+    ]
+  },
+  {
+    "id": "radiohead",
+    "name": "Radiohead",
+    "image": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=400&h=400&fit=crop",
+    "genre": "Alternative Rock",
+    "discography": [
+      { "title": "Pablo Honey", "year": 1993, "type": "album" },
+      { "title": "The Bends", "year": 1995, "type": "album" },
+      { "title": "OK Computer", "year": 1997, "type": "album" },
+      { "title": "Kid A", "year": 2000, "type": "album" },
+      { "title": "Amnesiac", "year": 2001, "type": "album" },
+      { "title": "Hail to the Thief", "year": 2003, "type": "album" },
+      { "title": "In Rainbows", "year": 2007, "type": "album" },
+      { "title": "The King of Limbs", "year": 2011, "type": "album" },
+      { "title": "A Moon Shaped Pool", "year": 2016, "type": "album" }
+    ]
+  },
+  {
+    "id": "tyler-creator",
+    "name": "Tyler, The Creator",
+    "image": "https://images.unsplash.com/photo-1571974599782-87624638275e?w=400&h=400&fit=crop",
+    "genre": "Hip Hop",
+    "discography": [
+      { "title": "Bastard", "year": 2009, "type": "album" },
+      { "title": "Goblin", "year": 2011, "type": "album" },
+      { "title": "Wolf", "year": 2013, "type": "album" },
+      { "title": "Cherry Bomb", "year": 2015, "type": "album" },
+      { "title": "Flower Boy", "year": 2017, "type": "album" },
+      { "title": "IGOR", "year": 2019, "type": "album" },
+      { "title": "Call Me If You Get Lost", "year": 2021, "type": "album" },
+      { "title": "Chromakopia", "year": 2024, "type": "album" }
+    ]
+  },
+  {
+    "id": "kanye-west",
+    "name": "Kanye West",
+    "image": "https://images.unsplash.com/photo-1571974599782-87624638275e?w=400&h=400&fit=crop",
+    "genre": "Hip Hop",
+    "discography": [
+      { "title": "The College Dropout", "year": 2004, "type": "album" },
+      { "title": "Late Registration", "year": 2005, "type": "album" },
+      { "title": "Graduation", "year": 2007, "type": "album" },
+      { "title": "808s & Heartbreak", "year": 2008, "type": "album" },
+      { "title": "My Beautiful Dark Twisted Fantasy", "year": 2010, "type": "album" },
+      { "title": "Yeezus", "year": 2013, "type": "album" },
+      { "title": "The Life of Pablo", "year": 2016, "type": "album" },
+      { "title": "Ye", "year": 2018, "type": "album" },
+      { "title": "Jesus Is King", "year": 2019, "type": "album" },
+      { "title": "Donda", "year": 2021, "type": "album" }
+    ]
+  },
+  {
+    "id": "frank-ocean",
+    "name": "Frank Ocean",
+    "image": "https://images.unsplash.com/photo-1493225255756-d9584f8606e9?w=400&h=400&fit=crop",
+    "genre": "R&B",
+    "discography": [
+      { "title": "Nostalgia, Ultra", "year": 2011, "type": "mixtape" },
+      { "title": "Channel Orange", "year": 2012, "type": "album" },
+      { "title": "Blonde", "year": 2016, "type": "album" }
+    ]
+  },
+  {
+    "id": "nirvana",
+    "name": "Nirvana",
+    "image": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=400&h=400&fit=crop",
+    "genre": "Grunge",
+    "discography": [
+      { "title": "Bleach", "year": 1989, "type": "album" },
+      { "title": "Nevermind", "year": 1991, "type": "album" },
+      { "title": "In Utero", "year": 1993, "type": "album" }
+    ]
+  },
+  {
+    "id": "queen",
+    "name": "Queen",
+    "image": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&h=400&fit=crop",
+    "genre": "Rock",
+    "discography": [
+      { "title": "Queen", "year": 1973, "type": "album" },
+      { "title": "Queen II", "year": 1974, "type": "album" },
+      { "title": "Sheer Heart Attack", "year": 1974, "type": "album" },
+      { "title": "A Night at the Opera", "year": 1975, "type": "album" },
+      { "title": "A Day at the Races", "year": 1976, "type": "album" },
+      { "title": "News of the World", "year": 1977, "type": "album" },
+      { "title": "Jazz", "year": 1978, "type": "album" },
+      { "title": "The Game", "year": 1980, "type": "album" }
+    ]
+  },
+  {
+    "id": "kendrick-lamar",
+    "name": "Kendrick Lamar",
+    "image": "https://images.unsplash.com/photo-1571974599782-87624638275e?w=400&h=400&fit=crop",
+    "genre": "Hip Hop",
+    "discography": [
+      { "title": "Section.80", "year": 2011, "type": "album" },
+      { "title": "good kid, m.A.A.d city", "year": 2012, "type": "album" },
+      { "title": "To Pimp a Butterfly", "year": 2015, "type": "album" },
+      { "title": "DAMN.", "year": 2017, "type": "album" },
+      { "title": "Mr. Morale & The Big Steppers", "year": 2022, "type": "album" }
+    ]
+  },
+  {
+    "id": "pink-floyd",
+    "name": "Pink Floyd",
+    "image": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=400&h=400&fit=crop",
+    "genre": "Progressive Rock",
+    "discography": [
+      { "title": "The Piper at the Gates of Dawn", "year": 1967, "type": "album" },
+      { "title": "A Saucerful of Secrets", "year": 1968, "type": "album" },
+      { "title": "Atom Heart Mother", "year": 1970, "type": "album" },
+      { "title": "Meddle", "year": 1971, "type": "album" },
+      { "title": "The Dark Side of the Moon", "year": 1973, "type": "album" },
+      { "title": "Wish You Were Here", "year": 1975, "type": "album" },
+      { "title": "Animals", "year": 1977, "type": "album" },
+      { "title": "The Wall", "year": 1979, "type": "album" }
+    ]
+  }
+]

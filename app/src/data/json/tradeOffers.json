@@ -1,0 +1,130 @@
+[
+  {
+    "id": "trade-1",
+    "fromUserId": "user-leonid",
+    "toUserId": "user-vasyukov",
+    "offeredItemIds": ["coll-3"],
+    "requestedItemIds": ["coll-11"],
+    "message": "Поставь 10 пожалуйста",
+    "status": "pending",
+    "createdAt": "2024-12-10T10:00:00.000Z",
+    "offeredItems": [
+      {
+        "id": "coll-3",
+        "title": "Currents Tour T-Shirt",
+        "artistId": "tame-impala",
+        "type": "tshirt",
+        "condition": "good",
+        "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&h=600&fit=crop",
+        "description": "Tour t-shirt from 2024, size L"
+      }
+    ],
+    "requestedItems": [
+      {
+        "id": "coll-11",
+        "title": "Nevermind - 30th Anniversary",
+        "artistId": "nirvana",
+        "type": "vinyl",
+        "condition": "new",
+        "image": "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?w=600&h=600&fit=crop",
+        "description": "Special 30th anniversary edition"
+      }
+    ]
+  },
+  {
+    "id": "trade-2",
+    "fromUserId": "user-vasyukov",
+    "toUserId": "user-leonid",
+    "offeredItemIds": ["item-10"],
+    "requestedItemIds": ["coll-1"],
+    "message": "Привет! Хочу обменять свой винил Tame Impala на твой винил Loqiemean. Интересно? Состояние идеальное, слушал всего пару раз.",
+    "status": "pending",
+    "createdAt": "2024-12-08T14:30:00.000Z",
+    "offeredItems": [
+      {
+        "id": "item-10",
+        "title": "Currents - Limited Edition",
+        "artistId": "tame-impala",
+        "type": "vinyl",
+        "condition": "new",
+        "image": "https://images.unsplash.com/photo-1619983081563-430f63602796?w=600&h=600&fit=crop",
+        "description": "Limited purple vinyl"
+      }
+    ],
+    "requestedItems": [
+      {
+        "id": "coll-1",
+        "title": "Сожги Этот Альбом - Limited Vinyl",
+        "artistId": "loqiemean",
+        "type": "vinyl",
+        "condition": "new",
+        "image": "https://images.unsplash.com/photo-1603048588665-791ca8aea617?w=600&h=600&fit=crop",
+        "description": "Ограниченное издание на красном виниле"
+      }
+    ]
+  },
+  {
+    "id": "trade-3",
+    "fromUserId": "user-dmitry",
+    "toUserId": "user-leonid",
+    "offeredItemIds": ["item-11"],
+    "requestedItemIds": ["coll-6"],
+    "message": "Привет! Предлагаю обменять кассету Пов3стки на IGOR. Кассета в идеальном состоянии, ни разу не проигрывалась!",
+    "status": "pending",
+    "createdAt": "2024-12-09T09:15:00.000Z",
+    "offeredItems": [
+      {
+        "id": "item-11",
+        "title": "Пов3стка - Cassette",
+        "artistId": "loqiemean",
+        "type": "cassette",
+        "condition": "new",
+        "image": "https://images.unsplash.com/photo-1598387993441-a364f854c3e1?w=600&h=600&fit=crop",
+        "description": "Limited cassette edition"
+      }
+    ],
+    "requestedItems": [
+      {
+        "id": "coll-6",
+        "title": "IGOR - Limited Yellow Vinyl",
+        "artistId": "tyler-creator",
+        "type": "vinyl",
+        "condition": "new",
+        "image": "https://images.unsplash.com/photo-1584679109589-72a9d4c1d5ce?w=600&h=600&fit=crop",
+        "description": "Limited yellow vinyl pressing"
+      }
+    ]
+  },
+  {
+    "id": "trade-4",
+    "fromUserId": "user-anna",
+    "toUserId": "user-kirill",
+    "offeredItemIds": ["item-12"],
+    "requestedItemIds": ["item-13"],
+    "message": "Привет! Обменяю свой постер Arctic Monkeys на что-нибудь из Radiohead. Очень хочу OK Computer!",
+    "status": "accepted",
+    "createdAt": "2024-12-05T16:00:00.000Z",
+    "offeredItems": [
+      {
+        "id": "item-12",
+        "title": "AM Tour Poster",
+        "artistId": "arctic-monkeys",
+        "type": "poster",
+        "condition": "new",
+        "image": "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=600&h=600&fit=crop",
+        "description": "Official tour poster"
+      }
+    ],
+    "requestedItems": [
+      {
+        "id": "item-13",
+        "title": "OK Computer - Promo Poster",
+        "artistId": "radiohead",
+        "type": "poster",
+        "condition": "like_new",
+        "image": "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=600&h=600&fit=crop",
+        "description": "Rare promo poster from 1997"
+      }
+    ]
+  }
+]

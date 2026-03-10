@@ -1,0 +1,72 @@
+[
+  {
+    "id": "review-1",
+    "itemId": "mp-1",
+    "authorId": "user-vasyukov",
+    "rating": 5,
+    "content": "Отличный винил! Пришел за неделю, упаковка на высшем уровне. Звук чистый, никаких щелчков. Рекомендую продавца!",
+    "likes": 12,
+    "likedBy": ["user-leonid", "user-dmitry", "user-anna"],
+    "createdAt": "2024-12-01T10:00:00.000Z"
+  },
+  {
+    "id": "review-2",
+    "itemId": "mp-1",
+    "authorId": "user-dmitry",
+    "rating": 4,
+    "content": "Хорошее качество, но доставка заняла чуть больше времени, чем ожидал. В целом доволен покупкой.",
+    "likes": 5,
+    "likedBy": ["user-leonid"],
+    "createdAt": "2024-11-28T14:30:00.000Z"
+  },
+  {
+    "id": "review-3",
+    "itemId": "mp-2",
+    "authorId": "user-anna",
+    "rating": 5,
+    "content": "Просто невероятный бокс-сет! Все дополнения на месте, книжка с фотографиями - отдельная любовь. Спасибо!",
+    "likes": 8,
+    "likedBy": ["user-vasyukov", "user-kirill"],
+    "createdAt": "2024-11-25T09:15:00.000Z"
+  },
+  {
+    "id": "review-4",
+    "itemId": "mp-3",
+    "authorId": "user-kirill",
+    "rating": 5,
+    "content": "Цветной винил выглядит потрясающе! Tame Impala никогда не подводят. Отправка была быстрой.",
+    "likes": 15,
+    "likedBy": ["user-leonid", "user-anna", "user-dmitry", "user-vasyukov"],
+    "createdAt": "2024-11-20T16:45:00.000Z"
+  },
+  {
+    "id": "review-5",
+    "itemId": "mp-5",
+    "authorId": "user-leonid",
+    "rating": 5,
+    "content": "IGOR на желтом виниле - это произведение искусства. Tyler создал шедевр, а этот винил его достойно представляет.",
+    "likes": 23,
+    "likedBy": ["user-dmitry", "user-anna", "user-kirill", "user-vasyukov", "user-ryan"],
+    "createdAt": "2024-11-15T11:30:00.000Z"
+  },
+  {
+    "id": "review-6",
+    "itemId": "mp-6",
+    "authorId": "user-ryan",
+    "rating": 5,
+    "content": "The best Radiohead reissue I've ever seen. The packaging, the sound quality, everything is perfect. Worth every penny.",
+    "likes": 18,
+    "likedBy": ["user-leonid", "user-kirill", "user-anna"],
+    "createdAt": "2024-11-10T08:00:00.000Z"
+  },
+  {
+    "id": "review-7",
+    "itemId": "mp-4",
+    "authorId": "user-anna",
+    "rating": 3,
+    "content": "Винил хороший, но конверт пришел с небольшой потертостью. За такую цену ожидала идеального состояния.",
+    "likes": 2,
+    "likedBy": [],
+    "createdAt": "2024-11-05T13:20:00.000Z"
+  }
+]

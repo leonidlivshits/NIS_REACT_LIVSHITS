@@ -1,0 +1,74 @@
+[
+  {
+    "id": "disc-1",
+    "title": "Кто пойдет на концерт Loqiemean в Москве?",
+    "content": "Всем привет! Кто планирует идти на концерт 15 марта 2025? Давайте встретимся! Будет презентация альбома ACCEPT ALL COOKIES. Я уже купил билеты на танцпол!",
+    "authorId": "user-dmitry",
+    "artistId": "loqiemean",
+    "tags": ["концерт", "встреча", "loqiemean", "москва"],
+    "likes": 24,
+    "likedBy": ["user-leonid", "user-vasyukov", "user-anna", "user-kirill"],
+    "replies": 8,
+    "createdAt": "2024-12-10T10:00:00.000Z"
+  },
+  {
+    "id": "disc-2",
+    "title": "Где найти редкий винил Arctic Monkeys?",
+    "content": "Ищу оригинальное издание Whatever People Say I Am. Кто знает, где можно купить по адекватной цене? Готов рассмотреть обмен на что-то из моей коллекции.",
+    "authorId": "user-anna",
+    "artistId": "arctic-monkeys",
+    "tags": ["поиск", "винил", "arctic monkeys", "помощь"],
+    "likes": 15,
+    "likedBy": ["user-leonid", "user-dmitry"],
+    "replies": 12,
+    "createdAt": "2024-12-09T14:30:00.000Z"
+  },
+  {
+    "id": "disc-3",
+    "title": "Обсуждение нового альбома Tame Impala",
+    "content": "Как вам свежий сингл? Лично мне напоминает старые работы! Жду полноценный альбом. Currents для меня - шедевр, надеюсь на что-то подобное.",
+    "authorId": "user-kirill",
+    "artistId": "tame-impala",
+    "tags": ["обсуждение", "новый альбом", "tame impala"],
+    "likes": 42,
+    "likedBy": ["user-leonid", "user-vasyukov", "user-anna"],
+    "replies": 18,
+    "createdAt": "2024-12-08T09:15:00.000Z"
+  },
+  {
+    "id": "disc-4",
+    "title": "Ваша любимая пластинка Loqiemean?",
+    "content": "Давайте обсудим дискографию! Мне кажется, \"У себя на кухне\" - это шедевр. А вы что думаете? Какой альбом у вас в топе?",
+    "authorId": "user-vasyukov",
+    "artistId": "loqiemean",
+    "tags": ["loqiemean", "дискография", "обсуждение"],
+    "likes": 56,
+    "likedBy": ["user-leonid", "user-dmitry", "user-anna", "user-kirill"],
+    "replies": 31,
+    "createdAt": "2024-12-07T16:45:00.000Z"
+  },
+  {
+    "id": "disc-5",
+    "title": "Продам винил Tyler, The Creator - IGOR",
+    "content": "Продаю желтый винил IGOR, состояние идеальное. Цена 4000₽, торг возможен. Пишите в личку! Могу отправить почтой по России.",
+    "authorId": "user-dmitry",
+    "artistId": "tyler-creator",
+    "tags": ["продажа", "tyler the creator", "igor", "винил"],
+    "likes": 8,
+    "likedBy": ["user-anna"],
+    "replies": 4,
+    "createdAt": "2024-12-06T11:20:00.000Z"
+  },
+  {
+    "id": "disc-6",
+    "title": "Советую послушать: Pink Floyd - The Wall",
+    "content": "Если вы еще не слушали этот альбом целиком - обязательно исправьте это! Концептуальный рок-опера, которая меняет восприятие музыки. Кто согласен?",
+    "authorId": "user-vasyukov",
+    "artistId": "pink-floyd",
+    "tags": ["рекомендация", "pink floyd", "классика"],
+    "likes": 73,
+    "likedBy": ["user-leonid", "user-kirill", "user-anna", "user-dmitry", "user-ryan"],
+    "replies": 22,
+    "createdAt": "2024-12-05T08:00:00.000Z"
+  }
+]
