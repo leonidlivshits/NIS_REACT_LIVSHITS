@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@keyframes blob {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(20px, -10px) scale(1.05); }
+  66% { transform: translate(-10px, 20px) scale(0.95); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+.animate-blob {
+  animation: blob 8s infinite ease-in-out;
+}
+.animation-delay-2000 { animation-delay: 2s; }
+.animation-delay-4000 { animation-delay: 4s; }
+
+.bg-soft-glass {
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.06);
+  backdrop-filter: blur(8px) saturate(120%);
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 4px 18px rgba(99,102,241,0.12);
+}
+
+:root {
+  --card-radius: 40px;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.shadow-xl {
+  box-shadow: 0 20px 40px rgba(12, 18, 43, 0.12);
+}
+
+input {
+  background-clip: padding-box;
+}
+
+@media (min-width: 768px) {
+  .max-w-lg { max-width: 640px; }
+}
