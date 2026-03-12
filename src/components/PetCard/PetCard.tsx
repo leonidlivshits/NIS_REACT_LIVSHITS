@@ -12,6 +12,10 @@ import resetIcon from '../../assets/icons/reset.svg';
 import disabledIcon from '../../assets/icons/disabled.svg';
 import avatarPlaceholder from '../../assets/avatars/placeholder.svg';
 
+const MOOD_ORDER: PetState['mood'][] = ['sad', 'content', 'happy', 'excited'];
+
+type ActionWithoutPayload = Extract<PetAction, { type: 'FEED' | 'LEVEL_UP' | 'CHEER' | 'RESET' }>;
+
 function petReducer(state: PetState, action: PetAction): PetState {
   switch (action.type) {
     case 'FEED':
@@ -24,18 +28,11 @@ function petReducer(state: PetState, action: PetAction): PetState {
       return {
         ...state,
         level: state.level + 1,
-        energy: Math.min(state.energy + 10, 100),
       };
     case 'CHEER': {
-      const newMood =
-        state.mood === 'sad'
-          ? 'content'
-          : state.mood === 'content'
-          ? 'happy'
-          : state.mood === 'happy'
-          ? 'excited'
-          : 'happy';
-      return { ...state, mood: newMood };
+      const currentIndex = MOOD_ORDER.indexOf(state.mood);
+      const nextIndex = Math.min(currentIndex + 1, MOOD_ORDER.length - 1);
+      return { ...state, mood: MOOD_ORDER[nextIndex] };
     }
     case 'RESET':
       return { ...state, energy: 100, mood: 'happy', level: 1 };
@@ -68,31 +65,45 @@ export const PetCard: React.FC<PetCardProps> = memo(({ initialPet, onUpdate }) =
     }
   }, [state.energy]);
 
+  const performAction = useCallback(
+    (actionType: ActionWithoutPayload['type'], logMessage: string, updates: Partial<Pet>) => {
+      dispatch({ type: actionType } as PetAction);
+      addEvent(`${state.name} ${logMessage}`);
+      onUpdate(state.id, updates);
+    },
+    [state.name, state.id, addEvent, onUpdate]
+  );
+
   const handleFeed = useCallback(() => {
-    dispatch({ type: 'FEED' });
-    addEvent(`${state.name} был покормлен. Энергия увеличена.`);
-    onUpdate(state.id, { energy: Math.min(state.energy + 25, 100), mood: 'happy' });
-  }, [state.name, state.id, state.energy, addEvent, onUpdate]);
+    const newEnergy = Math.min(state.energy + 25, 100);
+    performAction('FEED', 'был покормлен. Энергия увеличена.', {
+      energy: newEnergy,
+      mood: 'happy',
+    });
+  }, [state.energy, performAction]);
 
   const handleLevelUp = useCallback(() => {
-    dispatch({ type: 'LEVEL_UP' });
-    addEvent(`${state.name} повысил уровень.`);
-    onUpdate(state.id, { level: state.level + 1, energy: Math.min(state.energy + 10, 100) });
-  }, [state.name, state.id, state.level, state.energy, addEvent, onUpdate]);
+    performAction('LEVEL_UP', 'повысил уровень.', {
+      level: state.level + 1,
+    });
+  }, [state.level, performAction]);
 
   const handleCheer = useCallback(() => {
-    dispatch({ type: 'CHEER' });
-    addEvent(`${state.name} получил поддержку. Настроение улучшено.`);
-    const nextMood =
-      state.mood === 'sad' ? 'content' : state.mood === 'content' ? 'happy' : state.mood === 'happy' ? 'excited' : 'happy';
-    onUpdate(state.id, { mood: nextMood });
-  }, [state.name, state.id, state.mood, addEvent, onUpdate]);
+    const currentIndex = MOOD_ORDER.indexOf(state.mood);
+    const nextIndex = Math.min(currentIndex + 1, MOOD_ORDER.length - 1);
+    const nextMood = MOOD_ORDER[nextIndex];
+    performAction('CHEER', 'получил поддержку. Настроение улучшено.', {
+      mood: nextMood,
+    });
+  }, [state.mood, performAction]);
 
   const handleReset = useCallback(() => {
-    dispatch({ type: 'RESET' });
-    addEvent(`${state.name} сброшен до начального состояния.`);
-    onUpdate(state.id, { energy: 100, mood: 'happy', level: 1 });
-  }, [state.name, state.id, addEvent, onUpdate]);
+    performAction('RESET', 'сброшен до начального состояния.', {
+      energy: 100,
+      mood: 'happy',
+      level: 1,
+    });
+  }, [performAction]);
 
   const updateEnergy = useCallback(
     (id: string, newEnergy: number) => {
@@ -162,7 +173,7 @@ export const PetCard: React.FC<PetCardProps> = memo(({ initialPet, onUpdate }) =
             <span className={styles.statLabel}>Энергия:</span>
             <div className={styles.energyBar}>
               <div
-                className={`${styles.energyFill} ${state.energy <= 30 ? (styles as any).low : ''}`}
+                className={`${styles.energyFill} ${state.energy <= 30 ? styles.low : ''}`}
                 style={{ width: `${state.energy}%` }}
               />
             </div>
