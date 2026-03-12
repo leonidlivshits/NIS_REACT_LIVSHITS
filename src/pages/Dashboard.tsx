@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import {
   Container,
   Typography,
@@ -104,11 +104,12 @@ export const Dashboard: React.FC = () => {
     return ['all', ...species];
   }, [pets]);
 
-  const handleUpdatePet = (id: string, updates: Partial<Pet>) => {
+  const handleUpdatePet = useCallback((id: string, updates: Partial<Pet>) => {
     setPets(prev => prev.map(pet => (pet.id === id ? { ...pet, ...updates } : pet)));
     addEvent(`Обновлён питомец ${id}`);
-  };
+  }, []);
 
+  
   const onFilterChange = (e: SelectChangeEvent<string>) => {
     setSpeciesFilter(e.target.value as string);
     addEvent(`Фильтр изменён: ${e.target.value}`);
@@ -213,7 +214,7 @@ export const Dashboard: React.FC = () => {
         </Paper>
       )}
 
-      <EventLog open={eventLogOpen} onClose={() => setEventLogOpen(false)} />
+      <EventLog isOpen={eventLogOpen} onClose={() => setEventLogOpen(false)} />
     </Container>
   );
 };
