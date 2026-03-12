@@ -15,17 +15,17 @@ import { useEventLog } from '../../hooks/useEventLog';
 import TrashIcon from '../../assets/icons/TrashIcon.svg';
 
 interface EventLogProps {
-  open: boolean;
+  isOpen: boolean;
   onClose: () => void;
 }
 
-export const EventLog: React.FC<EventLogProps> = ({ open, onClose }) => {
+export const EventLog: React.FC<EventLogProps> = ({ isOpen, onClose }) => {
   const { events, clearEvents } = useEventLog();
 
   return (
     <Drawer
       anchor="right"
-      open={open}
+      open={isOpen}
       onClose={onClose}
       ModalProps={{ keepMounted: true }}
       sx={{ '& .MuiDrawer-paper': { width: 400, maxWidth: '90vw' } }}
