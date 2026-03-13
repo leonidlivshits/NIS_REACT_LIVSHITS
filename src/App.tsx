@@ -1,70 +1,42 @@
-import React, { useState, useMemo } from 'react';
-import { Movie, ViewMode, FilterType } from './types/movie';
-import { initialMovies } from './data/movies';
-import styles from './App.module.css';
-import { SearchBar } from './components/SearchBar/SearchBar';
-import { FilterButtons } from './components/FilterButtons/FilterButtons';
-import { ViewToggle } from './components/ViewToggle/ViewToggle';
-import { MovieList } from './components/MovieList/MovieList';
+import React from 'react';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { CssBaseline } from '@mui/material';
+import { EventProvider } from './context/EventContext';
+import { Dashboard } from './pages/Dashboard';
+import './styles/global.scss';
 
-export const App: React.FC = () => {
-  const [movies, setMovies] = useState<Movie[]>(initialMovies);
-  const [searchQuery, setSearchQuery] = useState<string>('');
-  const [currentFilter, setCurrentFilter] = useState<FilterType>('all');
-  const [currentView, setCurrentView] = useState<ViewMode>('grid');
+const theme = createTheme({
+  palette: {
+    mode: 'light',
+    primary: {
+      main: '#667eea',
+    },
+    secondary: {
+      main: '#764ba2',
+    },
+    background: {
+      default: '#f5f7fa',
+    },
+  },
+  typography: {
+    fontFamily: '"Inter", "Roboto", "Helvetica", "Arial", sans-serif',
+  },
+  shape: {
+    borderRadius: 12,
+  },
+});
 
-  const toggleFavorite = (id: number) => {
-    setMovies(prevMovies =>
-      prevMovies.map(movie =>
-        movie.id === id ? { ...movie, isFavorite: !movie.isFavorite } : movie
-      )
-    );
-  };
-
-  const filteredMovies = useMemo(() => {
-    let filtered = movies;
-
-    // Фильтрация по избранному
-    if (currentFilter === 'favorites') {
-      filtered = filtered.filter(movie => movie.isFavorite);
-    }
-
-    // Поиск по названию
-    if (searchQuery.trim()) {
-      filtered = filtered.filter(movie =>
-        movie.title.toLowerCase().includes(searchQuery.toLowerCase())
-      );
-    }
-
-    return filtered;
-  }, [movies, currentFilter, searchQuery]);
-
+const App: React.FC = () => {
   return (
-    <div className={styles.app}>
-      <header className={styles.header}>
-        <h1>Каталог фильмов</h1>
-        <div className={styles.controls}>
-          <SearchBar onSearch={setSearchQuery} />
-          <div className={styles.controlGroup}>
-            <FilterButtons
-              currentFilter={currentFilter}
-              onFilterChange={setCurrentFilter}
-            />
-            <ViewToggle
-              currentView={currentView}
-              onViewChange={setCurrentView}
-            />
-          </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <EventProvider>
+        <div className="App">
+          <Dashboard />
         </div>
-      </header>
-      
-      <main className={styles.main}>
-        <MovieList
-          movies={filteredMovies}
-          onToggleFavorite={toggleFavorite}
-          viewMode={currentView}
-        />
-      </main>
-    </div>
+      </EventProvider>
+    </ThemeProvider>
   );
 };
+
+export default App;
